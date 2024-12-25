@@ -7,6 +7,8 @@ from rest_framework import status
 from .models import IPO
 from .serializers import IPOSerializer
 
+def home(request):
+    return render(request, 'index.html')
 class IPOList(APIView):
     def get(self, request):
         ipo_data = IPO.objects.all()
